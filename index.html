@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="my-app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="app.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, options);
+        });
+
+        $(document).ready(function(){
+        $('.modal').modal();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function(){
+            $('.tooltipped').tooltip();
+        });
+        
+    </script>
+</head>
+<body class="amber ">
+    <nav>
+        <div class="nav-wrapper red">
+            <a href="#" class="brand-logo white-text" style="margin-left: 2%;"><b>Lorem</b><span class="amber-text"><b>Ipsum</b></span></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="modal-trigger" href="#modal3" style="font-size: 120%;">About the app</a></li>
+            <li><a class="modal-trigger" href="#modal4" style="font-size: 120%;">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="home">
+        
+        <div class="home1">
+            <h1 class="white-text" style="font-size: 600%;"><b>Lorem</b><span class="red-text"><b>Ipsum</b></span></h1>
+            <h6 class="white-text" style="font-size: 120%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Temporibus nemo explicabo quos quibusdam maiores <br> dolor nobis dolore quidem ex reiciendis. Minus veritatis unde <br>autem dolorem laboriosam tempore culpa magnam?</h6>
+
+            <br><br>
+            <a class="waves-effect red btn modal-trigger" href="#modal1" style="padding: 4%; display: inline; font-size: 110%;"><b>Create a Room</b></a>
+            <a class="waves-effect red btn  modal-trigger" href="#modal2" style="padding: 4%; display: inline; font-size: 110%;"><b>Join a Room</b></a>
+        </div>
+        <div class="home2">
+            <img src="und.png" width="110%" height="100%">
+        </div>
+
+        <!-- Create room -->
+        <div id="modal1" class="modal" style=" width: 30%;margin-top: 10% ;">
+            <div class="modal-content grey lighten-5">
+                <h4 style="margin-top: 5%;" class="center"><b>Create A </b><span class="red-text"><b>Syntax</b></span><span class="amber-text"><b>Room</b></span></h4>
+                <br>
+                <h6 style="font-size: 90%;">Enter Your Name</h6>
+                <input name="name" placeholder=" Your name" ng-model="name" style="border: 1px solid red;">
+                <p>You are gonna have a great time, {{name}}!</p>
+                <br>
+                <a class="waves-effect amber btn center" style="padding: 3%; display: inline; font-size: 90%;"><b>Create Room </b><i class="material-icons right">send</i></a>
+                    
+            </div>
+            
+        </div>
+
+        <!-- Join room -->
+
+        <div id="modal2" class="modal" style=" width: 30%;margin-top: 7% ;">
+            <div class="modal-content grey lighten-5">
+                <h4 style="margin-top: 5%;" class="center"><b>Create A </b><span class="red-text"><b>Syntax</b></span><span class="amber-text"><b>Room</b></span></h4>
+                <br>
+                <h6 style="font-size: 90%;">Enter Your Name</h6>
+                <input name="name" placeholder=" Your name" style="border: 1px solid red;">
+                <br><br>
+                <h6 style="font-size: 90%;">Enter Room ID</h6>
+                <input name=number placeholder="Room id here" style="border: 1px solid red;">
+                <br><br>
+                <a class="waves-effect amber btn center" style="padding: 3%; display: inline; font-size: 90%;"><b>Join Room </b><i class="material-icons right">send</i></a>
+                    
+            </div>
+            
+        </div>
+
+        <!-- About App -->
+
+        <div id="modal3" class="modal bottom-sheet" style="padding-top: 25%;">
+            <div style="margin-top: -23%; margin-left: 5%;">
+                <h4 style="font-size: 300%;"><b>About </b> <span class="amber-text" style=""><b>Lorem</b><span class="red-text"><b>Ipsum</b></span></span></h4> 
+                </h4>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, modi. Eaque quis, exercitationem nesciunt sequi possimus pariatur, ea, repellendus ullam ipsam aliquid magni expedita necessitatibus debitis quibusdam aperiam eos unde?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur maiores, sit, sed aspernatur aliquid assumenda accusantium exercitationem ipsum dolorem quae labore? Molestias cumque quam doloremque, deleniti corporis quibusdam aliquid atque?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda dolores quibusdam aliquid facilis consequatur? Excepturi repellendus dicta alias facilis? Itaque maxime earum totam fugit necessitatibus delectus omnis pariatur quos odit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ipsa natus, voluptates nostrum impedit ipsam, minus hic quaerat illo obcaecati accusamus, tempore tenetur velit molestiae ab voluptas ullam odit ut.</p>
+            </div>
+        </div>
+
+        <!-- About us -->
+        <div id="modal4" class="modal bottom-sheet" style="padding-top: 37%;">
+            <div style="margin-top: -35%; margin-left: 5%;">
+                <h4 style="font-size: 300%;"><b>About </b> <span class="amber-text"><b>Us</b></span></h4> 
+                </h4>
+                <br>
+                <div class="row">
+                    <div class="col s12 m3">
+                        <div class="card medium amber">
+                          <div class="card-image amber">
+                            <img src="apoorva.jpeg">
+                            <span class="card-title">Card Title</span>
+                          </div>
+                          <div class="card-content amber">
+                            <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                          </div>
+
+                        </div>
+                      </div>
+                    <div class="col s12 m9">
+                        <h2><b>Apoorva Singh</b></h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quia vero expedita dolor quis doloribus, cumque quam deserunt asperiores officiis delectus aliquam laborum repudiandae consequatur dolorum corrupti, praesentium veniam quo!</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quia vero expedita dolor quis doloribus, cumque quam deserunt asperiores officiis delectus aliquam laborum repudiandae consequatur dolorum corrupti, praesentium veniam quo!</p>
+
+                        <br><br>
+                        <a class="indigo btn tooltipped" data-tooltip="www.linkedin.com/in/apoorvasingh3010/" data-position="top" style="padding: 1%; display: inline; font-size: 110%; " ><b>LinkedIN</b></a>
+                        <a class="black btn tooltipped"data-tooltip="github.com/apoorva3010" data-position="bottom" style="padding: 1%; display: inline; font-size: 110%; "><b>Github</b></a>
+                        <a class="red btn tooltipped" data-tooltip="apoorvasingh3010@gmail.com" data-position="top" style="padding: 1%; display: inline; font-size: 110%; "><b>Email</b></a>
+
+
+                    </div>
+                  </div>
+                            
+                
+                
+                
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>
